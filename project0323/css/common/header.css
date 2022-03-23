@@ -1,0 +1,106 @@
+/*header*/
+.header{
+    background-color: #222;
+    /* position: relative; */
+}
+.header .inner-header{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    padding: 20px 0;
+    box-shadow: 0 1px 2px #000;
+    transition: all .3s;
+}
+.header .inner-header .nav{
+    flex: 0 1 1280px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.header .inner-header .nav h1.logo{
+    flex: 0 0 120px;
+    height: auto;
+}
+.header .inner-header .nav h1.logo img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.header .inner-header .nav .gnb{
+    /* border: 1px solid #000; */
+    flex: 0 1 500px;
+    /* padding: 20px 0; */
+    /* position: relative; */
+    transition: all .3s;
+}
+.header .inner-header .nav .gnb>ul{
+    display: flex;
+    justify-content: space-between;
+}
+.header .inner-header .nav .gnb>ul>li{
+    flex: 1;
+    text-align: center;
+    line-height: 60px;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    position: relative;
+    z-index: 9;
+}
+.header .inner-header .nav .gnb>ul>li:hover{
+    color: #fff;
+    background-color: #000;
+
+}
+.header .inner-header .nav .gnb>ul>li a{
+    flex: 1;
+    display: block;
+    color: inherit;
+    background-color: inherit;
+}
+.header .inner-header .nav .gnb>ul>li ul.sub{
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    /* background-color: #fff; */
+}
+.header .inner-header .nav .gnb>ul>li:hover ul.sub{
+    display: block;
+}
+.header .inner-header .nav .gnb>ul>li ul.sub>li{
+    line-height: 40px;
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+}
+.header .inner-header .nav .gnb>ul>li ul.sub>li:hover{
+    background-color: #000;
+    color: #fff;
+}
+.header .inner-header .nav .gnb>ul>li:hover ul.sub>li a{
+    display: block;
+    color: inherit;
+    background-color: inherit;
+}
+.header .inner-header .nav .gnb>ul>li:hover ul.sub{
+    color: #fff;
+    background-color: rgb(78, 78, 78);
+}
+
+@media only screen and (max-width:768px){
+    .header .inner-header{
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width:640px){
+    .header .inner-header{
+        padding: 0;
+    }
+    .header .inner-header .nav .gnb{
+        display: none;
+    }
+}
